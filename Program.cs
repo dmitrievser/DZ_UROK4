@@ -3,22 +3,25 @@
 3, 5 -> 243 (3⁵)
 
 2, 4 -> 16 
+*/
 
-Console.WriteLine("Введите число A: ");
-double A = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число A");
 
-Console.WriteLine("введите число B: ");
-double B = int.Parse(Console.ReadLine());
+int numberA = Convert.ToInt32(Console.ReadLine());
 
-double total = 0;
-Console.WriteLine($"А в степени В: {Exp(total)}");
+Console.WriteLine("введите число B");
 
-double Exp(double n)
+int numberB = Convert.ToInt32(Console.ReadLine());
+
+int step = numberA;
+
+for (int i = 1; i < numberB; i++)
 {
-    total = Math.Pow(A,B);
-    return total;
+step = step * numberA;
 }
+Console.WriteLine($"A в степени B равно: {step}");
 
+/*
 ------------------------------------------------------------------------------------------------------
 
 Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
